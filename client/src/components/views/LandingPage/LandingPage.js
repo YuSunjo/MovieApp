@@ -4,6 +4,7 @@ import MainImage from './Sections/MainImage';
 import GridCards from '../commons/GridCards';
 import {Row} from 'antd'
 
+
 function LandingPage() {
 
     const [Movies, setMovies] = useState([]);
