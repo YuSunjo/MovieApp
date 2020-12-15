@@ -3,6 +3,7 @@ import {API_URL, API_KEY, IMAGE_BASE_URL} from '../../Config';
 import MainImage from '../LandingPage/Sections/MainImage';
 import MovieInfo from './Sections/MovieInfo';
 import GridCards from '../commons/GridCards';
+import Favorite from './Sections/Favorite'
 import {Row} from 'antd';
 
 function MovieDetail(props) {
@@ -50,6 +51,11 @@ function MovieDetail(props) {
             {/* body */}
 
             <div style={{width: '85%', margin: '1rem auto'}}>
+
+                <div style={{display: 'flex', justifyContent:'flex-end'}}>
+                    {/* 로그인 했을 경우 ctrl+shift+i 창에서 application창에서 localStorage안에 정보 저장됨 */}
+                    <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')}/>
+                </div>
 
                 {/* Movie Info */}
                 <MovieInfo movie={Movie}/>
