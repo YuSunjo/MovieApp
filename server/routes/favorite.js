@@ -52,7 +52,7 @@ router.post('/addToFavorite', (req, res) => {
 
     favorite.save((err, doc) => {
         if(err) return res.status(400).send(err)
-        return res.status(200).json({seccess: true})
+        return res.status(200).json({success: true})
     })
 
 })
@@ -64,7 +64,7 @@ router.post('/getFavoredMovie', (req, res) => {
         return res.status(200).json({success:true, favorites})
     })
 
-    
+
 })
 
 

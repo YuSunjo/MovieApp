@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Axios from 'axios';
-import {Button, button} from 'antd';
+import {Button} from 'antd';
 
 function Favorite({movieId , userFrom, movieInfo}) {
 
